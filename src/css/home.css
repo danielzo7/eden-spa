@@ -1200,7 +1200,7 @@
     opacity: 0.5; /* Garante que fique visível */
   }
   
-  /* Os cards .card-prev-2 e .card-next-2 não serão aplicados via JS no mobile
-    e ficarão com opacity: 0 (conforme a regra base .carousel-card) 
-  */
+  .card-principal .titulo3{
+    font-size: 30px;
+  }
 }
