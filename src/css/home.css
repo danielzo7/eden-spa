@@ -1203,5 +1203,10 @@
   .card-principal .secao4 .titulo3 {
   font-size: 30px;
  }
+
+  .modal-content{
+    max-width: 700px;
+  }
 }
+
 
