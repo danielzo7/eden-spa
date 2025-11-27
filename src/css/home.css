@@ -1080,7 +1080,7 @@
     /* <<< MUDADO DE 'flex-start' PARA 'center' */
     gap: 25px;
     margin-left: 0;
-    width: 100%;
+    width: 800px;
   }
 
   .navegacao .menu .item {
@@ -1208,5 +1208,6 @@
     max-width: 700px;
   }
 }
+
 
 
