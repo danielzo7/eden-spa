@@ -1205,11 +1205,12 @@
     e ficarão com opacity: 0 (conforme a regra base .carousel-card) 
   */
 
-  .card-principal .titulo3{
+  .card-principal .secao4 .titulo3{
     font-size: 30px;
   }
 
   .modal-content{
     max-width: 700px;
   }
+
 }
