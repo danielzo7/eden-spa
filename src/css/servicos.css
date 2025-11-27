@@ -1,0 +1,922 @@
+@font-face {
+    font-family: "Vocago";
+    src: url(../fonts/Vocago.otf);
+}
+
+@font-face {
+    font-family: "Opencare";
+    src: url(..//fonts/Opencare.ttf);
+}
+
+@font-face {
+    font-family: "BravenRegular";
+    src: url(../fonts/BravenRegular.otf);
+}
+
+.cabecalho {
+    height: 135px;
+    /* background-color: #61735B; */
+    margin-bottom: 30px; /* Reduzido para acomodar a barra de pesquisa */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 350px;
+}
+
+.logo .titulo {
+    font-size: 20px;
+    font-weight: 800;
+    transition: .3s ease-in-out;
+    color: #c3c3c3;
+    font-family: "Vocago";
+}
+
+.logo .imagem {
+    width: 100px;
+}
+
+.cabecalho .navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c3c3c3;
+    border-radius: 14px;
+    max-width: 1400px;
+    margin-left: 273px;
+    padding: 25px;
+}
+
+.cabecalho .navegacao .menu {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-left: 350px;
+}
+
+.navegacao .menu .item {
+    transition: .3s ease-in-out; /* Velocidade ajustada */
+    color: #3D4739;
+}
+
+.navegacao .menu .item:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================================= */
+/* --- NOVOS ESTILOS DA BARRA DE PESQUISA --- */
+/* ============================================= */
+
+.search-container-wrapper {
+  max-width: 1400px;
+  margin: 0 auto 50px auto; /* Espaçamento */
+  padding: 0 25px; /* Alinha com a navegação */
+  margin-left: 273px; /* Alinha com a navegação */
+}
+
+.barra-pesquisa {
+  display: flex;
+  width: 100%;
+  border: 1px solid #c3c3c3;
+  border-radius: 14px;
+  overflow: hidden; /* Para arredondar o botão e o input */
+}
+
+.campo-pesquisa {
+  flex-grow: 1; /* Ocupa todo o espaço */
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+.campo-pesquisa:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.icone-pesquisa {
+  background-color: #c3c3c3;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.icone-pesquisa img {
+  width: 24px;
+  height: 24px;
+}
+.icone-pesquisa:hover {
+  background-color: #b0b0b0;
+}
+
+
+/* RELÓGIO */
+.cabecalho .dia {
+    display: flex;
+    font-size: 14px;
+    color: #c3c3c3;
+    border-left: 1px solid #c3c3c3;
+    padding-left: 15px;
+    max-width: 1400px;
+    margin-right: 370px;
+}
+
+.cabecalho .relogio {
+    width: 30px;
+    height: 30px;
+    margin-left: 840px;
+}
+
+
+/* CONTEUDO */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin-left: 355px;
+    margin-bottom: 50PX;
+}
+
+.container .secao4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .secao4 .titulo3 {
+  font-family: "Vocago", serif;
+  font-size: 65px;
+  color: #c3c3c3;
+}
+.main-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+.card {
+    background-color: #c3c3c3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h4 {
+    font-family: "Vocago";
+    color: #3D4739;
+    font-size: 20px;
+    text-align: center;
+    margin: 4px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+    overflow: hidden;
+}
+
+.card-content .price {
+    font-weight: bold;
+    margin-top: 30px;
+    color: #333;
+    font-size: 20px;
+}
+
+
+/* Botão .btn2 */
+.btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid #3D4739;
+    text-transform: uppercase;
+    color: #3D4739;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 35px;
+    left: 70px;
+}
+.btn2::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 6px);
+    height: calc(100% + 2px);
+    background-color: #c3c3c3;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+.btn2::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #c3c3c3;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+.btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+}
+.btn2:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+}
+.btn2:hover {
+    border: 2px solid #3D4739;
+}
+.btn2 .spn2 {
+    position: relative;
+    z-index: 3;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+
+/* RODAPÉ */
+.rodape {
+    background-color: #c3c3c3;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.rodape .planta {
+    background-image: url(../img/pranta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.rodape .fale-conosco {
+    font-family: "Vocago", sans-serif;
+    color: #3D4739;
+    border-bottom: 2px solid #3D4739
+}
+
+.rodape .redes-socias {
+    display: flex;
+    gap: 20px;
+}
+
+.rodape .redes-socias .icon {
+    display: flex;
+    width: 90px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.rodape .redes-socias .icon:hover {
+    transform: translateY(-3px);
+}
+
+
+/* MENSAGEM DE "SEM RESULTADOS" PARA PESQUISA */
+#no-results-message {
+    grid-column: 1 / -1; 
+    text-align: center;
+    font-size: 1.2rem;
+    color: #c3c3c3;
+    padding: 40px;
+    font-family: "Vocago", sans-serif;
+}
+
+
+/* ============================================= */
+/* ESTILOS DO MODAL DE AGENDAMENTO (COM ANIMAÇÃO) */
+/* ============================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px; 
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-overlay.visible .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #3D4739;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+  display: flex;
+  gap: 30px;
+}
+
+.modal-servico-info {
+  flex: 1;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+.modal-servico-info img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.modal-servico-info h3 {
+  font-family: "Vocago", sans-serif;
+  font-size: 24px;
+  color: #3D4739;
+  margin-bottom: 10px;
+}
+.modal-servico-info p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.modal-servico-info .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-agendamento {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar {
+  width: 100%;
+  border: 1px solid #61735B;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #61735b;
+  border-bottom: 1px solid #61735B;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #c3c3c3;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.calendar-header button:not(:disabled):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-header span {
+  font-weight: bold;
+  font-size: 16px;
+  color: #c3c3c3;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #61735B;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+  color: #3D4739;
+}
+
+.time-slot:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-modal-agendar {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3D4739;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-modal-agendar:hover:not(:disabled) {
+  background-color: #2c332a;
+}
+
+
+/* ============================================= */
+/* ESTILOS DO MODAL DE CONFIRMAÇÃO */
+/* ============================================= */
+.modal-content.simple-modal {
+  max-width: 450px;
+  text-align: center;
+}
+
+.simple-modal h2 {
+  font-family: "Vocago", sans-serif;
+  color: #3D4739;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.simple-modal p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.modal-btn-fechar {
+  width: 50%;
+  margin: 0 auto; /* Centraliza o botão */
+}
+
+
+/* ============================================= */
+/* NOVOS ESTILOS (Calendário Dinâmico) */
+/* ============================================= */
+.calendar-grid.weekdays {
+  padding: 10px;
+  padding-bottom: 0;
+  gap: 5px;
+  background-color: #f0f0f0;
+}
+.calendar-grid.weekdays span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  padding: 0;
+  text-align: center;
+}
+
+#calendar-days {
+  padding: 10px;
+  gap: 5px;
+  min-height: 240px; 
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.calendar-day:hover:not(.empty):not(.past) {
+  background-color: #e0e0e0;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+.calendar-day.past {
+  color: #aaa;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.calendar-day.past:hover {
+  background-color: transparent;
+}
+
+
+.calendar-day.selected,
+.time-slot.selected {
+  background-color: #61735B;
+  color: white;
+  border-color: #61735B;
+}
+
+.time-slot.selected {
+    color: white;
+}
+
+
+/* ============================================= */
+/* NOVOS ESTILOS (Resumo da Confirmação) */
+/* ============================================= */
+.confirmacao-detalhes {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.confirmacao-detalhes p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+.confirmacao-detalhes p strong {
+  color: #3D4739;
+}
+
+.btn-modal-agendar:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.calendar-header button:disabled {
+  color: #999;
+  cursor: not-allowed;
+  background-color: transparent !important;
+}
+
+/* ============================================= */
+/* ANIMAÇÃO PARA SURGIMENTO DOS HORÁRIOS         */
+/* ============================================= */
+@keyframes popInSlot {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #61735B;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+  color: #3D4739;
+
+  opacity: 0; 
+  animation: popInSlot 0.4s ease-out forwards;
+}
+
+
+/* ====================================================== */
+/* === ESTILOS DO MENU HAMBURGUER (MOBILE) === */
+/* ====================================================== */
+
+/* 1. Esconde os controles em Desktop por padrão */
+.menu-toggle,
+.menu-close,
+.menu-overlay {
+  display: none;
+  cursor: pointer;
+}
+
+/* 2. Media Query para Mobile (800px ou menos) */
+@media (max-width: 800px) {
+
+  /* --- INÍCIO: AJUSTES MENU HAMBÚRGUER --- */
+  .cabecalho {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .cabecalho .navegacao .menu {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    margin-left: 0px;
+}
+
+  .cabecalho .relogio,
+  .cabecalho .dia {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+    color: #c3c3c3;
+    z-index: 1001;
+    padding: 10px;
+    
+  }
+
+  .container-nav {
+    margin-top: 0;
+    position: static;
+  }
+
+  .navegacao {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #c3c3c3;
+    z-index: 2000;
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 30px 30px;
+    border-radius: 0;
+    max-width: 280px;
+    margin-left: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+    
+  }
+
+  .navegacao.open {
+    right: 0;
+  }
+
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 3rem;
+    color: #555;
+  }
+
+ /* Estiliza os links do menu (vertical) */
+  .navegacao .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* <<< MUDADO DE 'flex-start' PARA 'center' */
+    gap: 25px;
+    margin-left: 0;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .navegacao .menu .item {
+    font-size: 1.2rem;
+    color: #3D4739;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    width: auto;
+  }
+
+  .menu-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu-overlay.open {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* --- FIM: AJUSTES MENU HAMBÚRGUER --- */
+
+  /* ============================================= */
+  /* === AJUSTES DE RESPONSIVIDADE (SERVICOS.HTML) === */
+  /* ============================================= */
+
+  .cabecalho {
+    height: auto;
+    margin-bottom: 20px; /* Reduz margem */
+    padding: 20px 0;
+  }
+
+  .logo .imagem {
+    width: 80px; /* Logo menor */
+  }
+  
+  /* --- AJUSTE BARRA DE PESQUISA MOBILE --- */
+  .search-container-wrapper {
+    margin-left: 0; /* Remove margem do desktop */
+    padding: 0 15px; /* Adiciona padding lateral */
+    margin-bottom: 30px;
+  }
+  
+  .campo-pesquisa {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .icone-pesquisa img {
+    width: 20px;
+    height: 20px;
+  }
+  /* --- FIM AJUSTE PESQUISA --- */
+  
+
+  /* Centralização do Conteúdo Principal */
+  .container {
+    margin-left: 0;
+    padding: 0 15px; /* Adiciona padding lateral */
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .main-content {
+    gap: 25px; /* Reduz o gap entre os cards */
+    margin-left: 10px;
+  
+  }
+
+  .card {
+    width: 100%; /* Card ocupa a largura total da coluna do grid */
+    max-width: 340px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o card na coluna do grid */
+    height: auto; /* Altura automática */
+  }
+
+  .card-content .price {
+    margin-top: 15px; /* Menos espaço */
+  }
+
+  .btn2 {
+    left: 50%; /* Centraliza o botão */
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+  
+  /* Ajustes do Rodapé */
+  .rodape {
+    height: auto;
+    padding: 25px 0;
+  }
+
+  /* ============================================= */
+  /* === AJUSTES DO MODAL DE AGENDAMENTO (MOBILE) === */
+  /* ============================================= */
+  
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+    max-height: 90vh; /* Limita a altura */
+    overflow-y: auto; /* Permite scroll se for muito alto */
+  }
+
+  .modal-close {
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  .modal-body {
+    flex-direction: column; /* Empilha as colunas */
+    gap: 15px;
+  }
+
+  .modal-servico-info {
+    border-right: 0; /* Remove borda lateral */
+    padding-right: 0;
+    border-bottom: 1px solid #ddd; /* Adiciona borda inferior */
+    padding-bottom: 15px;
+  }
+
+  .modal-servico-info img {
+    height: 160px; /* Reduz altura da imagem */
+  }
+  
+  .modal-servico-info h3 { font-size: 20px; }
+  .modal-servico-info p { font-size: 14px; }
+  .modal-servico-info .price { font-size: 18px; }
+
+  /* Ajustes do Calendário */
+  .calendar-grid.weekdays span {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+
+  #calendar-days {
+    min-height: 220px; /* Reduz altura mínima */
+    gap: 3px;
+    padding: 5px;
+  }
+  
+  .calendar-day {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  /* Ajustes dos Horários */
+  .time-slots {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas é bom */
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .time-slot {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
