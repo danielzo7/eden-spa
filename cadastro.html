@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./src/css/cadastro.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="./index.html"><img src="./src/img/logo-eden-cinza (1).png" alt="logo" class="imagem" /> </a>
+            <img src="./src/img/clock.png" alt="" class="relogio">
+            <h1 class="dia">Segunda a Sábado (09h-19h) Dom e feriados (09h-12h) </h1>
+        </div>
+
+        <div id="menu-toggle" class="menu-toggle">&#9776;</div>
+
+        <nav class="navegacao" id="side-menu">
+
+            <div id="menu-close" class="menu-close">&times;</div>
+
+            <ul class="menu">
+                <li>
+                    <a href="./index.html" class="item">HOME</a>
+                </li>
+                <li>
+                    <a href="./servicos.html" class="item">SERVIÇOS</a>
+                </li>
+                <li>
+                    <a href="./produtos.html" class="item">LOJA</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html" class="item">CADASTRO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+
+    <div class="container-login-wrapper">
+        <div class="container-login" id="container-login">
+
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Crie sua Conta</h1>
+                    <input type="text" id="nome" placeholder="Nome" />
+                    <input type="email" id="email" placeholder="E-mail ou Celular" />
+                    <input type="password" id="senha" placeholder="Senha" />
+
+                    <label class="data-label">Data de Nascimento:</label>
+                    <div class="data-nascimento">
+                        <select id="dia" class="opcoes"></select>
+                        <select id="mes" class="opcoes"></select>
+                        <select id="ano" class="opcoes"></select>
+                    </div>
+
+                    <button type="button" onclick="cadastrar()">Cadastrar</button>
+                </form>
+            </div>
+
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Acesse sua Conta</h1>
+                    <input type="email" id="loginEmail" placeholder="E-mail ou Celular" />
+                    <input type="password" id="loginSenha" placeholder="Senha" />
+                    <button type="button" onclick="login()">Entrar</button>
+                </form>
+            </div>
+
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Bem-vindo de volta!</h1>
+                        <p>Para se manter conectado conosco, por favor, crie uma conta!</p>
+                        <button class="ghost" id="signIn">Entrar</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Olá, amigo!</h1>
+                        <p>Entre no paraíso!</p>
+                        <button class="ghost" id="signUp">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-usuario-wrapper" style="display: none;">
+        <div class="painel-usuario">
+            <div class="painel-usuario-info">
+                <h1 id="mensagem-boas-vindas"></h1>
+                <ul id="detalhes-usuario">
+                </ul>
+                <button class="btn-logout" onclick="logout()">Sair da Conta (Logout)</button>
+            </div>
+
+            <div class="painel-usuario-agendamentos">
+                <h2>Seus Agendamentos</h2>
+                <div id="lista-agendamentos">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal-mensagem" class="modal-overlay">
+        <div class="modal-conteudo">
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-texto"></p>
+
+            <div id="modal-botoes-confirmacao" class="modal-botoes-confirmacao" style="display: none;">
+                <button id="modal-confirmar-sim" class="btn-modal-agendar">Sim</button>
+                <button id="modal-cancelar-nao" class="btn-modal-agendar btn-nao">Não</button>
+            </div>
+
+            <button id="modal-fechar" class="btn-modal-agendar" style="display: none;">Fechar</button>
+        </div>
+    </div>
+    <footer class="rodape">
+        <h1 class="fale-conosco">Fale Conosco</h1>
+        <div class="redes-socias">
+            <a href="https://linktr.ee/_Eden.spa">
+          <img src="./src/img/linktree (1).png" alt="" class="icon">
+        </a>
+        
+        </div>
+    </footer>
+
+</body>
+<script src="./src/js/painel.js"></script>
+
+</html>

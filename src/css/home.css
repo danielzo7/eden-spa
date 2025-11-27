@@ -1,0 +1,1204 @@
+@font-face {
+  font-family: "Vocago", sans-serif;
+  src: url(../fonts/Vocago.otf);
+}
+
+@font-face {
+  font-family: "Opencare";
+  src: url(..//fonts/Opencare.ttf);
+}
+
+@font-face {
+  font-family: "BirdsOfParadise";
+  src: url(..//fonts/Birds\ of\ Paradise\ ©\ PERSONAL\ USE\ ONLY.ttf);
+}
+
+@font-face {
+  font-family: "Darleston";
+  src: url(..//fonts/Darleston.otf);
+}
+
+@font-face {
+  font-family: "Ananda";
+  src: url(..//fonts/Ananda\ Black\ Personal\ Use.ttf);
+}
+
+@font-face {
+  font-family: "Madina";
+  src: url(..//fonts/Madina.ttf);
+}
+
+@font-face {
+  font-family: "Blacksword";
+  src: url(..//fonts/Blacksword.otf);
+}
+
+.cabecalho {
+  height: 135px;
+  /* background-color: #61735B; */
+  z-index: inherit;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 350px;
+}
+
+.logo .titulo {
+  font-size: 20px;
+  font-weight: 800;
+  transition: .3s ease-in-out;
+  color: #c3c3c3;
+  font-family: "Vocago", sans-serif;
+}
+
+.logo .imagem {
+  width: 100px;
+}
+
+.container-nav {
+  margin-top: -30px;
+  position: relative;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c3c3c3;
+  border-radius: 14px;
+  max-width: 1400px;
+  margin-left: 273px;
+  padding: 25px;
+  z-index: 1;
+  position: relative;
+}
+
+.navegacao .menu {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  margin-left: 350px;
+  z-index: 99;
+}
+
+.navegacao .menu .item {
+
+  transition: .5s ease-in-out;
+  color: #3D4739;
+}
+
+.navegacao .menu .item:hover {
+  text-decoration: underline;
+}
+
+/* RELÓGIO */
+.cabecalho .dia {
+  display: flex;
+  font-size: 14px;
+  /* margin-left: 200px; */
+  color: #c3c3c3;
+  border-left: 1px solid #c3c3c3;
+  padding-left: 15px;
+  max-width: 1400px;
+  margin-right: 370px;
+}
+
+.cabecalho .relogio {
+  width: 30px;
+  height: 30px;
+  margin-left: 840px;
+}
+
+/* PAINEL */
+.anuncios {
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+.imagem-painel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 800px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  z-index: 0;
+  margin-top: -35px;
+}
+
+.mostrar {
+  opacity: 1;
+}
+
+.frases {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #e9e4e4;
+  /* z-index: 10; */
+  font-family: "Ananda";
+  font-size: 55px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Botões de navegação */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  z-index: 20;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+
+#seta-voltar {
+  left: 20px;
+}
+
+#seta-avancar {
+  right: 20px;
+}
+
+
+.slide-indicadores {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Centraliza horizontalmente */
+  display: flex;
+  gap: 12px;
+  /* Espaço entre as bolinhas */
+  z-index: 20;
+  /* Garante que fique acima da imagem */
+}
+
+.indicador-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c3c3c38d;
+  /* Cor cinza padrão */
+  transition: background-color 0.3s ease;
+}
+
+.indicador-dot.ativo {
+  background-color: #ffffff;
+  /* Cor branca para o slide ativo */
+}
+
+
+/* --- INÍCIO DO NOVO CARROSSEL DE SERVIÇOS --- */
+
+.card-principal {
+  margin: 50PX;
+}
+
+.card-principal .secao4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.card-principal .secao4 .titulo3 {
+  font-family: "Vocago", serif;
+  font-size: 65px;
+  color: #c3c3c3;
+  padding: 0 70px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 50px auto;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 500px;
+  background-color: #c3c3c3;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s;
+  transform: translate(-50%, -50%) scale(0.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-card .card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-card .card-content {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+/* NOVO: Re-estilizando os textos (baseado no .flip-card-back) */
+.carousel-card .titulo-carta {
+  font-size: 25px;
+  font-family: "Vocago", sans-serif;
+  color: #3D4739;
+}
+
+.carousel-card .sobre3 {
+  font-size: 16px;
+  color: rgb(54, 52, 52);
+  margin: 0;
+}
+
+/* NOVO: Re-estilizando o botão (baseado no seu 'button') */
+.carousel-card a {
+  text-decoration: none;
+  /* Garante que o link não tenha sublinhado */
+}
+
+.carousel-card .texto-botao {
+  color: #c3c3c3;
+  font-size: 15px;
+  background-color: #8f8c8c;
+  width: 6.5em;
+  height: 2.3em;
+  /* Um pouco mais de altura */
+  line-height: 2.3em;
+  /* Centraliza o texto verticalmente */
+  border-radius: 30em;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  padding: 0;
+  display: block;
+  /* Garante que o botão preencha o <a> */
+}
+
+.carousel-card .texto-botao::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #394447 0%, #61735B 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.carousel-card .texto-botao:hover::before {
+  width: 9em;
+}
+
+
+/* --- ESTADOS DOS CARDS (A MÁGICA) --- */
+
+/* 1. Card Ativo (Centro) */
+.carousel-card.card-active {
+  opacity: 1;
+  /* Totalmente opaco */
+  z-index: 3;
+  transform: translate(-50%, -50%) scale(1.1);
+  /* Um pouco maior */
+}
+
+/* NOVO: Mostra o conteúdo SÓ no card ativo */
+.carousel-card.card-active .card-content {
+  opacity: 1;
+}
+
+/* 2. Card Anterior (Esquerda) */
+.carousel-card.card-prev {
+  opacity: 0.5;
+  /* Semi-transparente, como na imagem */
+  z-index: 2;
+  transform: translate(-100%, -50%) scale(0.9);
+  /* Posição esquerda */
+  cursor: pointer;
+}
+
+/* 3. Card Próximo (Direita) */
+.carousel-card.card-next {
+  opacity: 0.5;
+  /* Semi-transparente, como na imagem */
+  z-index: 2;
+  transform: translate(0%, -50%) scale(0.9);
+  /* Posição direita */
+  cursor: pointer;
+}
+
+/* 4. Card Anterior 2 (Esquerda Longe) - NOVO */
+.carousel-card.card-prev-2 {
+  opacity: 0.3;
+  /* Mais transparente */
+  z-index: 1;
+  /* Atrás do card 'prev' */
+  transform: translate(-150%, -50%) scale(0.7);
+  /* Mais à esquerda e menor */
+  cursor: pointer;
+}
+
+/* 5. Card Próximo 2 (Direita Longe) - NOVO */
+.carousel-card.card-next-2 {
+  opacity: 0.3;
+  /* Mais transparente */
+  z-index: 1;
+  /* Atrás do card 'next' */
+  transform: translate(50%, -50%) scale(0.7);
+  /* Mais à direita e menor */
+  cursor: pointer;
+}
+
+/* --- FIM DO NOVO CARROSSEL DE SERVIÇOS --- */
+
+
+/* Botão .btn2 já possui animações complexas, mantido como original */
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #3D4739;
+  text-transform: uppercase;
+  color: #3D4739;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 35px;
+
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 6px);
+  height: calc(100% + 2px);
+  background-color: #c3c3c3;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 50px);
+  background-color: #c3c3c3;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover {
+  border: 1px solid #3D4739;
+}
+
+.btn2 .spn2 {
+  position: relative;
+  color: #3D4739;
+  z-index: 3;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+
+
+/* RODAPÉ */
+.rodape {
+  background-color: #c3c3c3;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+
+}
+
+
+
+.rodape .redes-socias {
+  display: flex;
+  gap: 20px;
+}
+
+.rodape .fale-conosco {
+  font-family: "Vocago", sans-serif;
+  color: #3D4739;
+  border-bottom: 2px solid #3D4739
+}
+
+.rodape .redes-socias .icon {
+  display: flex;
+  width: 90px;
+  height: 30px;
+  z-index: 9;
+}
+
+
+/* ====================================================== */
+/* CÓDIGO DOS CARDS EXPANSÍVEIS           */
+/* ====================================================== */
+
+/* --- Layout dos Cards --- */
+.expand-card-container {
+  display: grid;
+  /* Cria um grid responsivo: 2 colunas em telas maiores, 1 coluna em telas menores */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  width: 100%;
+  /* Reutiliza a largura máxima do seu .carousel-container */
+  max-width: 1400px;
+  margin: 0 auto;
+  /* Centraliza */
+  /* padding: 0 20px; */
+  margin-bottom: 50px;
+}
+
+/* --- Estilo Base do Card --- */
+.expand-card {
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  /* Importante: Define a origem da transformação para a animação */
+  transform-origin: center center;
+}
+
+.expand-card::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.expand-card .card-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Estilos do Conteúdo --- */
+.expand-card .label {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.expand-card h2 {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 8px;
+  font-family: "Vocago", sans-serif;
+  /* Reutilizando sua fonte */
+}
+
+.expand-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.expand-card .learn-more {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.expand-card .learn-more:hover {
+  transform: translateX(4px);
+}
+
+/* --- Temas de Cores e Gráficos --- */
+
+/* 2. Card Lilás */
+.card-lilac {
+  background-color: #c3c3c3;
+}
+
+.card-lilac .label {
+  color: #61735B;
+}
+
+.card-lilac .learn-more {
+  color: #61735B;
+}
+
+.card-lilac::after {
+  width: 250px;
+  height: 250px;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, #727272 30%, #a7a7a7 60%, transparent 90%);
+  opacity: 0.8;
+}
+
+/* --- ESTILOS PARA EXPANSÃO --- */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.expand-card-placeholder {
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.expand-card.expanding {
+  position: fixed;
+  z-index: 1001;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Desativa o cursor de "ponteiro" quando está expandido */
+  cursor: default;
+}
+
+
+/* ====================================================== */
+/* CÓDIGO DOS MINI-CARDS E MODAL          */
+/* ====================================================== */
+
+.modal-card-section {
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.mini-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.mini-card {
+  width: 100%;
+  max-width: 350px;
+  background: #c3c3c3;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.mini-card img {
+  width: 280px;
+  height: 280px;
+  /* object-fit: cover; */
+  /* display: block; */
+  margin-left: 35px;
+}
+
+.mini-card h4 {
+  padding: 10px;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Vocago", sans-serif;
+  /* Reutilizando sua fonte */
+  color: #3D4739;
+}
+
+
+/* --- Estilos do Modal (Expandido) --- */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  /* (top: 0, left: 0, right: 0, bottom: 0) */
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-view {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  /* Começa um pouco menor */
+  width: 90%;
+  max-width: 600px;
+  /* Largura máxima do card expandido */
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 16px;
+  z-index: 2001;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  /* Para o scroll interno */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-view.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  /* Anima para o tamanho normal */
+}
+
+/* .modal-view img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+} */
+
+.modal-content {
+  padding: 24px;
+  overflow-y: auto;
+  /* Adiciona scroll se o conteúdo for longo */
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  font-family: "Vocago", sans-serif;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+
+  color: #555;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  padding-bottom: 5px;
+  /* Ajuste visual do "X" */
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*
+  ======================================================
+  --- INÍCIO DA MODIFICAÇÃO CSS (ADICIONADO) ---
+  Estilos para os "quadrados" de informação e o link.
+  ======================================================
+*/
+#modal-desc .info-box-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* A caixa de informação individual ("quadrado") */
+#modal-desc .info-box {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 8px;
+  border-left: 4px solid #61735B;
+  font-size: 0.85rem;
+  color: #3D4739;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#modal-desc .info-box::before {
+  content: attr(data-icon) ' ';
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+#modal-desc .info-box strong {
+  color: #3D4739;
+
+}
+
+#modal-desc .info-box a {
+  color: #3D4739;
+  text-decoration: underline;
+}
+
+#modal-desc .info-box a:hover {
+  color: #61735B;
+}
+
+/* --- FIM DA MODIFICAÇÃO CSS --- */
+
+
+/* ====================================================== */
+/* ANIMAÇÃO DE CHEGADA (SCROLL) PARA MINI-CARDS */
+/* ====================================================== */
+
+/* 1. Estado inicial dos cards (antes de aparecer) */
+.mini-card {
+  /* ...todos os seus estilos anteriores (background, border-radius, etc)
+       NÃO APAGUE NADA, apenas adicione o código abaixo: */
+
+  /* ESCONDE O CARD INICIALMENTTE */
+  opacity: 0;
+  transform: translateY(30px);
+  /* Começa 30px abaixo */
+
+  /* A transição que fará a animação de chegada */
+  /* Adicionamos opacity e transform às transições existentes */
+  transition: opacity 0.5s ease-out,
+    transform 0.5s ease-out,
+    box-shadow 0.3s ease;
+}
+
+/* 2. O estado final (quando o CONTAINER tiver a classe .visible) */
+.mini-card-container.visible .mini-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 3. Atraso (stagger) para cada card aparecer em sequência */
+.mini-card-container.visible .mini-card:nth-child(1) {
+  transition-delay: 0.1s;
+  /* Primeiro card */
+}
+
+.mini-card-container.visible .mini-card:nth-child(2) {
+  transition-delay: 0.2s;
+  /* Segundo card */
+}
+
+.mini-card-container.visible .mini-card:nth-child(3) {
+  transition-delay: 0.3s;
+  /* Terceiro card */
+}
+
+.mini-card-container.visible .mini-card:nth-child(4) {
+  transition-delay: 0.4s;
+  /* Terceiro card */
+}
+
+/* 4. Correção para o hover funcionar imediatamente */
+.mini-card-container.visible .mini-card:hover {
+  transition-delay: 0s;
+  transform: translateY(-5px);
+  /* Mantém o efeito de hover */
+}
+
+
+/* ====================================================== */
+/* CÓDIGO DO FORMULÁRIO DE DEPOIMENTO (NOVO) */
+/* ====================================================== */
+
+#testimonial-form-card h2 {
+  margin-bottom: 20px;
+  /* Mais espaço */
+}
+
+.testimonial-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #61735B;
+  /* Cor lilás suave */
+  border-radius: 6px;
+  margin-bottom: 12px;
+  /* Fonte similar ao site */
+  font-size: 14px;
+  background-color: #f4f3f9;
+  /* Fundo lilás bem claro */
+  box-sizing: border-box;
+  /* Garante que o padding não quebre o layout */
+  resize: vertical;
+  /* Permite redimensionar apenas a altura do textarea */
+}
+
+.onial-input:focus {
+  outline: none;
+  border-color: #c4cfbf;
+  /* Cor lilás mais forte no foco */
+  box-shadow: 0 0 5px #e9e7f5;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  /* Tamanho das estrelas */
+  color: #ccc;
+  /* Cor da estrela vazia (cinza) */
+  margin-bottom: 20px;
+}
+
+.star-rating span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0 3px;
+  color: #fff;
+}
+
+/* Cor das estrelas no hover (amarelo/laranja) */
+.star-rating span:hover,
+.star-rating span.hover {
+  color: #8c9d86;
+}
+
+/* Cor das estrelas selecionadas (amarelo-ouro) */
+.star-rating span.selected {
+  color: #61735B;
+}
+
+/* Container para o formulário de depoimento separado */
+.testimonial-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px 20px;
+  /* Espaçamento */
+  max-width: 1400px;
+  /* Mesma largura do grid */
+  margin: 0 auto;
+  /* Centraliza */
+}
+
+/* Estilo específico para o card de formulário */
+#testimonial-form-card {
+  width: 100%;
+  max-width: 700px;
+  /* Faz o card do formulário mais largo */
+  cursor: default;
+  /* Remove o cursor de "mãozinha" */
+}
+
+/* Garante que o card dentro do novo container se comporte */
+.testimonial-form-container>.expand-card {
+  min-width: 320px;
+}
+
+
+/* ====================================================== */
+/* --- CÓDIGO RESPONSIVO E MENU HAMBÚRGUER --- */
+/* ====================================================== */
+
+/* 1. Esconde os controles em Desktop por padrão */
+.menu-toggle,
+.menu-close,
+.menu-overlay {
+  display: none;
+  cursor: pointer;
+}
+
+/* 2. Media Query para Mobile (800px ou menos) */
+@media (max-width: 800px) {
+
+  .cabecalho {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .cabecalho .navegacao .menu {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    margin-left: 0px;
+  }
+
+  .cabecalho .relogio,
+  .cabecalho .dia {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+    color: #c3c3c3;
+    z-index: 1001;
+    padding: 10px;
+
+  }
+
+  .container-nav {
+    margin-top: 0;
+    position: static;
+  }
+
+  .navegacao {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #c3c3c3;
+    z-index: 2000;
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 30px 30px;
+    border-radius: 0;
+    max-width: 280px;
+    margin-left: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .navegacao.open {
+    right: 0;
+  }
+
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 3rem;
+    color: #555;
+  }
+
+  /* Estiliza os links do menu (vertical) */
+  .navegacao .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* <<< MUDADO DE 'flex-start' PARA 'center' */
+    gap: 25px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navegacao .menu .item {
+    font-size: 1.2rem;
+    color: #3D4739;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    width: auto;
+  }
+
+  .menu-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu-overlay.open {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* --- FIM: AJUSTES MENU HAMBÚRGUER --- */
+
+
+  /* --- INÍCIO: AJUSTES PAINEL HERO MOBILE (NOVO) --- */
+  .anuncios {
+    height: 400px;
+    /* Reduz a altura do painel */
+  }
+
+  .imagem-painel {
+    height: 400px;
+    /* Reduz a altura da imagem */
+    width: 100%;
+    /* Faz a imagem ocupar 100% da largura */
+    margin-top: 0;
+    /* Remove o margin-top negativo */
+  }
+
+  .frases {
+    font-size: 36px;
+    /* Reduz o tamanho da fonte do título */
+  }
+
+  .anuncios .slide-indicadores {
+    bottom: 15px;
+  }
+
+  /* Substitui as imagens do painel (Desktop -> Mobile) */
+  /* Imagem 1: chinesa.webp -> barrigao.jpg */
+  .anuncios .imagem-painel:nth-of-type(1) {
+    background-image: url('./src/img/barrigao.jpg');
+  }
+
+  /* Imagem 2: argila.jpg -> MAEEFILHA.jpeg */
+  .anuncios .imagem-painel:nth-of-type(2) {
+    background-image: url('./src/img/MAEEFILHA.jpeg') !;
+  }
+
+  /* Imagem 3: preda.jpg -> casalcama.jpeg */
+  .anuncios .imagem-painel:nth-of-type(3) {
+    background-image: url('./src/img/casalcama.jpeg') !;
+  }
+
+  /* Imagem 4: ombro.jpg -> SOZIN.jpg */
+  .anuncios .imagem-painel:nth-of-type(4) {
+    background-image: url('./src/img/SOZIN.jpg') !;
+  }
+
+  /* Imagem 5: testa.png -> card-mini.jpg */
+  .anuncios .imagem-painel:nth-of-type(5) {
+    background-image: url('./src/img/card-mini.jpg') !;
+  }
+
+  /* --- FIM: AJUSTES PAINEL HERO MOBILE --- */
+
+
+  /* --- OUTROS AJUSTES DE RESPONSIVIDADE --- */
+  
+  /* ============================================= */
+  /* === AJUSTES CARROSSEL SERVIÇOS (MOBILE) === */
+  /* ============================================= */
+
+  .carousel-container {
+    height: 470px; /* Ajusta a altura do container para o tamanho mobile */
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .carousel-card {
+    width: 250px;
+    height: 470px;
+  }
+  
+  /* Ajusta o card central (sem zoom) */
+  .carousel-card.card-active {
+    transform: translate(-50%, -50%) scale(1); /* Remove o zoom (era 1.1) */
+  }
+  
+  /* Aproxima o card da esquerda */
+  .carousel-card.card-prev {
+    transform: translate(-90%, -50%) scale(0.8); /* Era -100% e scale(0.9) */
+  }
+  
+  /* Aproxima o card da direita */
+  .carousel-card.card-next {
+    transform: translate(-10%, -50%) scale(0.8); /* Era 0% e scale(0.9) */
+  }
+  
+  /* Os cards .card-prev-2 e .card-next-2 não serão aplicados via JS no mobile
+    e ficarão com opacity: 0 (conforme a regra base .carousel-card) 
+  */
+}
