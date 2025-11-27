@@ -1088,14 +1088,14 @@
     color: #3D4739;
     padding-bottom: 8px;
     border-bottom: 1px solid #ccc;
-    width: auto;
+    width: 800px;
   }
 
   .menu-overlay {
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 800px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1999;
@@ -1208,6 +1208,7 @@
     max-width: 700px;
   }
 }
+
 
 
 
