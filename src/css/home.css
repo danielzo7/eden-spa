@@ -1200,7 +1200,8 @@
     opacity: 0.5; /* Garante que fique visível */
   }
   
-  .card-principal .titulo3{
-    font-size: 30px;
-  }
+  .card-principal .secao4 .titulo3 {
+  font-size: 30px;
+ }
 }
+
